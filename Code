@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+int main() {
+  int year;
+  std::cout << "What year would you like to check?\n";
+  std::cin >> year;
+  if (year < 1000) {
+    std::cout << "Please type in a 4 digit year.\n";
+    return 0;
+  }
+  if (year > 9999){
+    std::cout << "Please enter in a 4 digit year.\n";
+    return 0;
+  }
+  if (year % 4 != 0) {
+    std::cout << "The year " << year << " isnt a leap year.\n";
+    return 0;
+  }
+ if (year % 100 ==0 && year % 400 != 0) {
+   std::cout << "The year " << year << " isnt a leap year.\n";
+   return 0;
+ }
+ if (year % 4 == 0 ) {
+   std::cout << "The year " << year << " is a leap year.\n";
+ }
+}
